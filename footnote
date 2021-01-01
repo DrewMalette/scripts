@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# author: drew
+# date: jan 1, 2021
+# description:
+#  scans argument directory for .py files
+#  and searches them for square bracket numbers
+
+if [ "$#" -eq 1 ]; then
+    grep -in "#.*[\[0-9\]]" ${1%/}/*.py
+else
+    echo "usage: footnote DIR"
+    exit    
+fi
