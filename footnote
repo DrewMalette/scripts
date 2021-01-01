@@ -4,7 +4,8 @@
 # date: jan 1, 2021
 # description:
 #  scans argument directory for .py files
-#  and searches them for square bracket numbers
+#  and searches them for square bracket numbers.
+#  if argument ends in a slash, it is stripped
 
 if [ "$#" -eq 1 ]; then
     grep -in "#.*[\[0-9\]]" ${1%/}/*.py
