@@ -8,7 +8,7 @@
 #  if argument ends in a slash, it is stripped
 
 if [ "$#" -eq 1 ]; then
-    grep -in "#.*[\[0-9\]]" ${1%/}/*.py
+    grep --color -in \#.*[\[0-9\]].* ${1%/}/*.py
 else
     echo "usage: footnote DIR"
     exit    
